@@ -1,0 +1,24 @@
+/* Estilos Globais e Variáveis de Alto Contraste para a APAE */
+:root {
+  --color-green: #009541;
+  --color-yellow: #FFCC00;
+  --color-gray-dark: #333333;
+  --color-gray-light: #F4F4F4;
+  --color-white: #FFFFFF;
+  
+  --bg-primary: var(--color-white);
+  --text-primary: var(--color-gray-dark);
+  --accent-primary: var(--color-green);
+  --accent-secondary: var(--color-yellow);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
