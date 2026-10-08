@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Painel de Chamadas APAE - Alto Contraste</title>
-  </head>
-  <body>
-    <div id="app">
-      <!-- O conteúdo será injetado dinamicamente via TypeScript -->
-    </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Painel de chamadas da APAE" />
+  <title>Painel de Chamadas APAE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="top-border" aria-label="Identidade visual APAE"></header>
+  <main class="dashboard">
+    <section class="main-stage" aria-labelledby="main-user-name">
+      <div class="watermark" aria-hidden="true">APAE</div>
+      <div class="active-call" id="active-call-container">
+        <p class="badge">Chamada atual</p>
+        <div class="caller-name"><h1 id="main-user-name" aria-live="polite">Marcos Oliveira</h1></div>
+        <div class="call-details">
+          <div class="detail-card">
+            <span class="material-symbols-outlined" aria-hidden="true">door_open</span>
+            <div><span class="detail-label">Destino</span><strong id="main-destination">Sala 08</strong></div>
+          </div>
+          <div class="detail-card detail-card--time"><span class="detail-label">Horário</span><time id="main-time">08:15</time></div>
+        </div>
+        <div class="professional"><span class="badge badge--small">Profissional</span><h2 id="main-professional">Dra. Ana Silva</h2></div>
+      </div>
+      <div class="audio-status"><span class="material-symbols-outlined" aria-hidden="true">volume_up</span><span>Sinal sonoro ativo</span></div>
+    </section>
+
+    <aside class="history-sidebar" aria-labelledby="history-title">
+      <header class="history-header"><span class="material-symbols-outlined" aria-hidden="true">history</span><h2 id="history-title">Últimas chamadas</h2></header>
+      <ol class="history-list" id="history-list" aria-live="polite"></ol>
+    </aside>
+
+    <div class="new-call-overlay" id="new-call-overlay" aria-hidden="true"><strong>Nova chamada</strong></div>
+  </main>
+
+  <footer class="footer">
+    <div class="clock-panel"><time id="digital-clock">00:00</time><span>Brasília</span></div>
+    <div class="ticker" aria-label="Avisos"><div class="ticker-content"><span>Bem-vindo à APAE</span><i aria-hidden="true"></i><span>Mantenha seus documentos em mãos</span><i aria-hidden="true"></i><span>Respeite as filas de prioridade</span><i aria-hidden="true"></i><span>APAE: compromisso com a inclusão</span></div></div>
+  </footer>
+
+  <script type="module" src="./src/main.ts"></script>
+</body>
+
 </html>
