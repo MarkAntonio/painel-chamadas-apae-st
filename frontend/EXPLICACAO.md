@@ -44,11 +44,11 @@ Para praticar CSS, altere uma variavel como `--primary` ou ajuste uma regra de `
 
 ### DOM tipado
 
-`getElement()` procura um elemento por ID e gera um erro claro se ele nao existir. O tipo generico ajuda o TypeScript a entender que o elemento e, por exemplo, um `HTMLTimeElement`.
+`getElement()` procura um elemento por ID e gera um erro claro se ele não existir. O tipo generico ajuda o TypeScript a entender que o elemento e, por exemplo, um `HTMLTimeElement`.
 
 ### Relogio
 
-`updateClock()` le a hora do navegador, atualiza o texto de `#digital-clock` e registra o valor ISO no atributo `datetime`. O `setInterval` executa a funcao a cada segundo.
+`updateClock()` lê a hora do navegador, atualiza o texto de `#digital-clock` e registra o valor ISO no atributo `datetime`. O `setInterval` executa a funcao a cada segundo.
 
 ### Rotacao e historico
 
@@ -67,7 +67,7 @@ Em termos práticos, a escala base de fontes e espacos e definida em `rem` e os 
 
 ## 5. CSV
 
-`src/core/csv-parser.ts` carrega um arquivo por `fetch`, usa a primeira linha como cabecalho e retorna objetos. Ele ainda nao esta conectado ao fluxo da tela. Essa separacao permite estudar o parser antes de integrar uma fonte de dados real.
+`src/core/csv-parser.ts` carrega um arquivo por `fetch`, usa a primeira linha como cabecalho e retorna objetos. Ele ainda não esta conectado ao fluxo da tela. Essa separação permite estudar o parser antes de integrar uma fonte de dados real.
 
 O parser atual assume CSV simples, sem virgulas internas entre aspas. O proximo exercicio e tratar corretamente campos escapados e validar cabecalhos.
 
@@ -75,7 +75,7 @@ O parser atual assume CSV simples, sem virgulas internas entre aspas. O proximo 
 
 A pagina usa `main`, `section`, `aside`, `footer`, `time`, `h1` e `h2`. As areas que mudam possuem `aria-live`, e os icones decorativos possuem `aria-hidden`.
 
-Ao alterar o projeto, mantenha contraste alto, evite texto cortado e nao remova os nomes acessiveis das regioes.
+Ao alterar o projeto, mantenha contraste alto, evite texto cortado e não remova os nomes acessiveis das regioes.
 
 ## 7. Exercicios sugeridos
 

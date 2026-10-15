@@ -68,7 +68,7 @@ body {
 .watermark {
     position: absolute;
     color: var(--primary);
-    font-size: 18rem;
+    font-size: 9rem;
     font-weight: 800;
     opacity: .035;
     pointer-events: none;
@@ -374,17 +374,17 @@ body {
 
 @media (min-width: 2560px) {
     :root {
-        --base-size: 15px;
+        --base-size: 24px;
         --panel-padding: 3rem;
-        --header-height: 7rem;
+        --header-height: 5rem;
     }
 }
 
 @media (min-width: 3840px) {
     :root {
-        --base-size: 16px;
+        --base-size: 30px;
         --panel-padding: 3.3rem;
-        --header-height: 7.5rem;
+        --header-height: 6rem;
     }
 }
 
