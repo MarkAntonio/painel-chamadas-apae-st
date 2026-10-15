@@ -1,0 +1,34 @@
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+// Puxa a chave de API da variável de ambiente
+const apiKey = process.env.GEMINI_API_KEY;
+
+if (!apiKey) {
+  console.error("Erro: A variável de ambiente GEMINI_API_KEY não foi encontrada.");
+  process.exit(1);
+}
+
+const genAI = new GoogleGenerativeAI(apiKey);
+
+async function run() {
+  // Inicializa o modelo
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+  // Captura o texto digitado no terminal
+  const prompt = process.argv.slice(2).join(" ");
+
+  if (!prompt) {
+    console.log("Por favor, digite uma pergunta. Exemplo: node gemini.js 'Como centralizar uma div?'");
+    return;
+  }
+
+  try {
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    console.log("\n🤖 Gemini:\n" + response.text() + "\n");
+  } catch (error) {
+    console.error("Ocorreu um erro ao chamar a API:", error.message);
+  }
+}
+
+run();
